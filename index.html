@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Payment Richmarket.id</h1>
+        <p>Pilih metode pembayaran yang nyaman untuk Anda</p>
+    </div>
+
+    <div class="payment-methods">
+        <div class="tabs">
+            <div class="tab active" data-method="qris">
+                <i class="fas fa-qrcode"></i>
+                <span>QRIS</span>
+            </div>
+            <div class="tab" data-method="dana">
+                <i class="fas fa-wallet"></i>
+                <span>DANA</span>
+            </div>
+            <div class="tab" data-method="shopeepay">
+                <i class="fas fa-shopping-bag"></i>
+                <span>ShopeePay</span>
+            </div>
+            <div class="tab" data-method="gopay">
+                <i class="fas fa-motorcycle"></i>
+                <span>GoPay</span>
+            </div>
+            <div class="tab" data-method="mandiri">
+                <i class="fas fa-university"></i>
+                <span>Mandiri</span>
+            </div>
+            <div class="tab" data-method="bni">
+                <i class="fas fa-building"></i>
+                <span>BNI</span>
+            </div>
+            <div class="tab" data-method="nobu">
+                <i class="fas fa-landmark"></i>
+                <span>Sea Bank</span>
+            </div>
+        </div>
+
+        <div class="payment-details">
+            <!-- QRIS -->
+            <div class="payment-detail active" id="qris">
+                <div class="detail-header">
+                    <i class="fas fa-qrcode detail-icon"></i>
+                    <h2>QRIS</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="qr-container">
+                        <img src="https://files.catbox.moe/jr0p3u.jpg" alt="QR Code" class="qr-code"style="width: 300px; height: auto;" />
+                    </div>
+                    <div class="account-info">
+                        <p>Scan QR code di atas atau gunakan ID:</p>
+                        <div class="copy-container">
+                            <input type="text" value="OK1257884" readonly>
+                            <button class="copy-btn" data-value="OK1257884">
+                                <i class="fas fa-copy"></i>
+                                <span class="tooltip">Salin</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DANA -->
+            <div class="payment-detail" id="dana">
+                <div class="detail-header">
+                    <i class="fas fa-wallet detail-icon"></i>
+                    <h2>DANA</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="account-info">
+                        <div class="account-field">
+                            <label>Nomor DANA</label>
+                            <div class="copy-container">
+                                <input type="text" value="082276854797" readonly>
+                                <button class="copy-btn" data-value="082276854797">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <label>Nama Penerima</label>
+                            <div class="copy-container">
+                                <input type="text" value="Richad Osfaldo Ginting" readonly>
+                                <button class="copy-btn" data-value="Richad Osfaldo Ginting">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Buka aplikasi DANA</li>
+                            <li>Pilih menu Kirim</li>
+                            <li>Masukkan nomor DANA di atas</li>
+                            <li>Masukkan nominal yang akan dibayar</li>
+                            <li>Konfirmasi dan selesaikan pembayaran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ShopeePay -->
+            <div class="payment-detail" id="shopeepay">
+                <div class="detail-header">
+                    <i class="fas fa-shopping-bag detail-icon"></i>
+                    <h2>ShopeePay</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="account-info">
+                        <div class="account-field">
+                            <label>ID ShopeePay</label>
+                            <div class="copy-container">
+                                <input type="text" value="082164982522" readonly>
+                                <button class="copy-btn" data-value="082164982522">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <label>Nama Penerima</label>
+                            <div class="copy-container">
+                                <input type="text" value="Richad Osfaldo" readonly>
+                                <button class="copy-btn" data-value="Richad Osfaldo">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Buka aplikasi Shopee</li>
+                            <li>Pilih menu ShopeePay</li>
+                            <li>Pilih Transfer</li>
+                            <li>Masukkan ID ShopeePay di atas</li>
+                            <li>Masukkan nominal yang akan dibayar</li>
+                            <li>Konfirmasi dan selesaikan pembayaran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GoPay -->
+            <div class="payment-detail" id="gopay">
+                <div class="detail-header">
+                    <i class="fas fa-motorcycle detail-icon"></i>
+                    <h2>GoPay</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="account-info">
+                        <div class="account-field">
+                            <label>Nomor GoPay</label>
+                            <div class="copy-container">
+                                <input type="text" value="08282276853797" readonly>
+                                <button class="copy-btn" data-value="08282276853797">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <label>Nama Penerima</label>
+                            <div class="copy-container">
+                                <input type="text" value="Richad Osfaldo" readonly>
+                                <button class="copy-btn" data-value="Richad Osfaldo">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Buka aplikasi Gojek</li>
+                            <li>Pilih menu GoPay</li>
+                            <li>Pilih 'Kirim ke Teman'</li>
+                            <li>Masukkan nomor GoPay di atas</li>
+                            <li>Masukkan nominal yang akan dibayar</li>
+                            <li>Konfirmasi dan selesaikan pembayaran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bank Mandiri -->
+            <div class="payment-detail" id="mandiri">
+                <div class="detail-header">
+                    <i class="fas fa-university detail-icon"></i>
+                    <h2>Bank Mandiri</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="account-info">
+                        <div class="account-field">
+                            <label>Nomor Rekening</label>
+                            <div class="copy-container">
+                                <input type="text" value="1050020398263" readonly>
+                                <button class="copy-btn" data-value="1050020398263">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <label>Nama Penerima</label>
+                            <div class="copy-container">
+                                <input type="text" value="Richad Osfaldo Ginting" readonly>
+                                <button class="copy-btn" data-value="Richad Osfaldo Ginting">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Buka aplikasi Livin' by Mandiri atau internet banking</li>
+                            <li>Login ke akun Anda</li>
+                            <li>Pilih menu Transfer</li>
+                            <li>Pilih Transfer ke Mandiri</li>
+                            <li>Masukkan nomor rekening di atas</li>
+                            <li>Masukkan nominal yang akan dibayar</li>
+                            <li>Konfirmasi dan selesaikan pembayaran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BNI -->
+            <div class="payment-detail" id="bni">
+                <div class="detail-header">
+                    <i class="fas fa-building detail-icon"></i>
+                    <h2>Bank BNI</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="account-info">
+                        <div class="account-field">
+                            <label>Nomor Rekening</label>
+                            <div class="copy-container">
+                                <input type="text" value="1797191465" readonly>
+                                <button class="copy-btn" data-value="1797191465">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <label>Nama Penerima</label>
+                            <div class="copy-container">
+                                <input type="text" value="Richad Osfaldo Ginting" readonly>
+                                <button class="copy-btn" data-value="Richad Osfaldo Ginting">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Buka aplikasi BNI Mobile Banking atau internet banking</li>
+                            <li>Login ke akun Anda</li>
+                            <li>Pilih menu Transfer</li>
+                            <li>Pilih Transfer ke BNI</li>
+                            <li>Masukkan nomor rekening di atas</li>
+                            <li>Masukkan nominal yang akan dibayar</li>
+                            <li>Konfirmasi dan selesaikan pembayaran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sea Bank -->
+            <div class="payment-detail" id="nobu">
+                <div class="detail-header">
+                    <i class="fas fa-landmark detail-icon"></i>
+                    <h2>Sea Bank</h2>
+                </div>
+                <div class="detail-body">
+                    <div class="account-info">
+                        <div class="account-field">
+                            <label>Nomor Rekening</label>
+                            <div class="copy-container">
+                                <input type="text" value="901570248698 " readonly>
+                                <button class="copy-btn" data-value="901570248698 ">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="account-field">
+                            <label>Nama Penerima</label>
+                            <div class="copy-container">
+                                <input type="text" value="Richad Osfaldo Ginting" readonly>
+                                <button class="copy-btn" data-value="RRichad Osfaldo Ginting">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="tooltip">Salin</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="instruction">
+                        <h3>Cara Pembayaran:</h3>
+                        <ol>
+                            <li>Buka aplikasi Nobu Mobile atau internet banking</li>
+                            <li>Login ke akun Anda</li>
+                            <li>Pilih menu Transfer</li>
+                            <li>Pilih Transfer ke Nobu Bank</li>
+                            <li>Masukkan nomor rekening di atas</li>
+                            <li>Masukkan nominal yang akan dibayar</li>
+                            <li>Konfirmasi dan selesaikan pembayaran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-popup" id="success-popup">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Berhasil disalin!</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
